@@ -1,0 +1,14 @@
+# Exclude Claude Code session memory from public deployment
+.claude/
+
+# Exclude orphaned JSX source reference files (not loaded by the app)
+Animations.jsx
+Hero.jsx
+Icon.jsx
+Nav.jsx
+Pages.jsx
+Sections.jsx
+Waveform.jsx
+
+# Exclude development docs
+README.md

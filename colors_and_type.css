@@ -1,0 +1,69 @@
+/* Vibmon brand tokens & typography */
+
+:root {
+  /* Core palette */
+  --vb-navy:       #0A1628;
+  --vb-navy-deep:  #06101F;
+  --vb-navy-mid:   #101F38;
+  --vb-teal:       #00C9A7;
+  --vb-teal-dark:  #00A688;
+  --vb-green:      #38A169;
+  --vb-green-dark: #2F8A57;
+  --vb-yellow:     #FBBF24;
+
+  /* Grays */
+  --vb-gray-50:  #F5F7FA;
+  --vb-gray-100: #E8ECF1;
+  --vb-gray-200: #E2E8F0;
+  --vb-gray-300: #CBD5E0;
+  --vb-gray-400: #A0AEC0;
+  --vb-gray-500: #718096;
+  --vb-gray-600: #4A5568;
+  --vb-gray-700: #2D3748;
+  --vb-text:     #0A1628;
+}
+
+/* Typography utilities */
+.vb-display-1 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+.vb-display-2 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+.vb-heading-1 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.vb-heading-2 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+.vb-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.vb-stat {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1;
+}
+.vb-mono {
+  font-family: 'JetBrains Mono', monospace;
+}

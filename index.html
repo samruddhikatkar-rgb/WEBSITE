@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vibmon Instruments &amp; Medicals | Vibration Analysis &amp; Medical Equipment, Pune</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="On-site vibration analysis, condition monitoring and predictive maintenance across India. RT-PCR systems and diagnostic instruments supplied to NABL labs and hospitals from Pune.">
+
+  <!-- Canonical & crawl directives -->
+  <link rel="canonical" href="https://vibmon.com/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://vibmon.com/">
+  <meta property="og:title"       content="Vibmon Instruments &amp; Medicals | Vibration Analysis &amp; Medical Equipment, Pune">
+  <meta property="og:description" content="On-site vibration analysis, condition monitoring and predictive maintenance across India. RT-PCR systems and diagnostic instruments supplied to NABL labs and hospitals from Pune.">
+  <meta property="og:image"       content="https://vibmon.com/Vibmon_logo.png">
+
+  <!-- JSON-LD: LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Vibmon Instruments and Medicals",
+    "description": "Vibration analysis, condition monitoring, predictive maintenance services and medical diagnostic equipment supply — serving industry and healthcare from Pune, India.",
+    "url": "https://vibmon.com/",
+    "logo": "https://vibmon.com/Vibmon_logo.png",
+    "image": "https://vibmon.com/Vibmon_logo.png",
+    "telephone": "+91-9421019235",
+    "email": "vibmon@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <link rel="stylesheet" href="animations.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Inter', system-ui, sans-serif; }
+    a { cursor: pointer; }
+    h1, h2, h3, h4, .vb-display-1, .vb-display-2 { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    .vb-stat { font-family: 'Barlow Condensed', system-ui, sans-serif; font-weight: 700; }
+
+    /* ── Mobile-first responsive overrides ── */
+    @media (max-width: 768px) {
+      /* Nav */
+      .vb-nav-links        { display: none !important; }
+      .vb-nav-cta-desktop  { display: none !important; }
+      .vb-hamburger        { display: flex !important; }
+      .vb-nav-inner { padding: 0 16px !important; }
+
+      /* Hero */
+      .vb-hero-inner { padding: 80px 20px 60px !important; }
+      .vb-hero-h1   { font-size: 42px !important; }
+
+      /* Stat strip */
+      .vb-stat-inner { grid-template-columns: repeat(2,1fr) !important; padding: 32px 20px !important; }
+
+      /* Division split */
+      .vb-div-split  { grid-template-columns: 1fr !important; }
+      .vb-div-half   { padding: 48px 24px !important; }
+
+      /* Industry row */
+      .vb-industry-grid { grid-template-columns: repeat(2,1fr) !important; }
+
+      /* Why Vibmon */
+      .vb-why-grid   { grid-template-columns: repeat(2,1fr) !important; }
+
+      /* Service cards */
+      .vb-svc-grid   { grid-template-columns: 1fr !important; }
+
+      /* Footer */
+      .vb-footer-grid { grid-template-columns: 1fr 1fr !important; }
+
+      /* About two-col */
+      .vb-about-hero-grid,
+      .vb-about-div-grid,
+      .vb-about-hq-grid { grid-template-columns: 1fr !important; }
+
+      /* Contact */
+      .vb-contact-grid { grid-template-columns: 1fr !important; }
+
+      /* General padding */
+      .vb-section-pad { padding: 56px 20px !important; }
+    }
+
+    @media (max-width: 480px) {
+      .vb-stat-inner { grid-template-columns: 1fr 1fr !important; }
+      .vb-why-grid   { grid-template-columns: 1fr !important; }
+      .vb-footer-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Netlify Forms detection — must exist as static HTML so Netlify registers the form at deploy time -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text"  name="name" />
+    <input type="text"  name="company" />
+    <input type="email" name="email" />
+    <input type="tel"   name="phone" />
+    <input type="text"  name="enquiry_type" />
+    <textarea           name="message"></textarea>
+  </form>
+
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+  <!-- ── Icon system ── -->
+  <script type="text/babel">
+    const ICON_PATHS = {
+      activity: 'M22 12h-4l-3 9L9 3l-3 9H2',
+      gauge: 'M12 14l4-4 M20 12a8 8 0 1 0-15.5 2.8',
+      cog: 'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z',
+      factory: 'M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4H4a2 2 0 0 0-2 2z M17 18h1 M12 18h1 M7 18h1',
+      flask: 'M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2 M8 2h8 M7 16h10',
+      stethoscope: 'M11 2v2 M5 2v2 M5 4h6v6a3 3 0 1 1-6 0Z M8 15v2a4 4 0 0 0 8 0v-2 M16 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z',
+      syringe: 'm18 2 4 4 M15 5l4 4 M14 5l-3 3 M13 4l7 7 M9 9l-1.5 1.5a2 2 0 0 0 0 2.8L4 17l3 3 3.7-3.5a2 2 0 0 0 2.8 0L15 15 M11 11l4 4',
+      microscope: 'M6 18h8 M3 22h18 M14 22a7 7 0 1 0 0-14h-1 M9 14h2 M15 13l-2-2 M14 8l-3-3-2 2 3 3-1 1 1 1 1-1 1-1Z',
+      shield: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z M9 12l2 2 4-4',
+      zap: 'M13 2 3 14h9l-1 8 10-12h-9z',
+      award: 'M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z M8.2 14 6 22l6-3 6 3-2.2-8',
+      clock: 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z M12 6v6l4 2',
+      arrowRight: 'M5 12h14 M12 5l7 7-7 7',
+      mail: 'M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2 M22 7l-10 6L2 7',
+      phone: 'M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.9 9.8a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z',
+      pin: 'M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 1 1 16 0Z M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
+      dropletPlus: 'M12 2 4.5 10a8 8 0 1 0 15 0Z M12 11v6 M9 14h6',
+      beaker: 'M9 3h6v6l5 9a2 2 0 0 1-1.7 3H5.7A2 2 0 0 1 4 18l5-9V3 M7 14h10',
+      buildingMed: 'M3 22h18 M5 22V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v18 M9 7h2 M9 11h2 M13 7h2 M13 11h2 M9 22v-4h6v4',
+    };
+
+    function Icon({ name, size = 20, stroke = 1.5, style }) {
+      const d = ICON_PATHS[name];
+      if (!d) return null;
+      const paths = d.split(' M').map((p, i) => (i === 0 ? p : 'M' + p));
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={stroke} strokeLinecap="round" strokeLinejoin="round" style={style}>
+          {paths.map((p, i) => <path key={i} d={p} />)}
+        </svg>
+      );
+    }
+    window.Icon = Icon;
+  </script>
+
+  <!-- ── Animations: Reveal + Counter ── -->
+  <script type="text/babel">
+    const { useEffect, useRef, useState } = React;
+
+    function useReveal() {
+      const ref = useRef(null);
+      useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        if (typeof IntersectionObserver === 'undefined') { el.classList.add('in'); return; }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+        io.observe(el);
+        return () => io.disconnect();
+      }, []);
+      return ref;
+    }
+
+    function Reveal({ children, delay = 0, as: Tag = 'div', style, className = '' }) {
+      const ref = useReveal();
+      return (
+        <Tag ref={ref} data-delay={delay} className={`vb-reveal ${className}`} style={style}>
+          {children}
+        </Tag>
+      );
+    }
+
+    function Counter({ to, suffix = '', prefix = '', duration = 1600, style }) {
+      const ref = useRef(null);
+      const [val, setVal] = useState(0);
+      const [started, setStarted] = useState(false);
+      useEffect(() => {
+        const el = ref.current;
+        if (!el || started) return;
+        if (typeof IntersectionObserver === 'undefined') { setStarted(true); setVal(to); return; }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting && !started) {
+              setStarted(true);
+              io.unobserve(e.target);
+              const t0 = performance.now();
+              const tick = (now) => {
+                const t = Math.min(1, (now - t0) / duration);
+                const eased = 1 - Math.pow(1 - t, 3);
+                setVal(Math.round(eased * to));
+                if (t < 1) requestAnimationFrame(tick);
+              };
+              requestAnimationFrame(tick);
+            }
+          });
+        }, { threshold: 0.4 });
+        io.observe(el);
+        return () => io.disconnect();
+      }, [to, duration, started]);
+      return <span ref={ref} style={style}>{prefix}{val.toLocaleString()}{suffix}</span>;
+    }
+
+    window.Reveal = Reveal;
+    window.Counter = Counter;
+    window.useReveal = useReveal;
+  </script>
+
+  <!-- ── Waveform SVG background ── -->
+  <script type="text/babel">
+    /*
+     * Live Oscilloscope Waveform — SMIL path morphing
+     *
+     * ViewBox: 0 0 1440 120  (center y=60)
+     * 3 full sine periods across 1440px  →  T = 480px per period
+     * Cubic bezier sine approximation: CP offset = 0.3642 × (T/2) = 0.3642 × 240 ≈ 87px
+     *
+     * Each period is drawn as two cubic segments:
+     *   rise:  C x+87,peak   x+240-87,peak   x+240,cy
+     *   fall:  C x+240+87,tr x+480-87,tr     x+480,cy
+     *
+     * State A — calm,  amp=28:   peaks @ y=32,  troughs @ y=88
+     * State B — erratic, amp=46: peaks @ y=14,  troughs @ y=106
+     * State C — phase-shifted with irregular midpoints (vibration artifact)
+     */
+
+    function Waveform({ opacity = 0.5, color = '#00C9A7' }) {
+      const uid = React.useId().replace(/:/g, '_');
+      const gradId  = `wfGrad_${uid}`;
+      const glowId  = `wfGlow_${uid}`;
+      const glowId2 = `wfGlow2_${uid}`;
+
+      // ── path data ────────────────────────────────────────────────────────────
+      // Helper: build one 3-period cubic-bezier sine from cx0 (start x), cy (centerline),
+      // amp (half-amplitude), and optional per-period cp-y nudges for irregularity.
+      function sine3(cx0, cy, amp, nudge) {
+        // nudge = [{rise: dy_peak, fall: dy_trough}, ...] per period (length 3)
+        const n = nudge || [{},{},{},{}];
+        const cp = 87; // 0.3642 × 240
+        let d = `M${cx0},${cy}`;
+        for (let p = 0; p < 3; p++) {
+          const x = cx0 + p * 480;
+          const pk = cy - amp + (n[p] && n[p].pk != null ? n[p].pk : 0);
+          const tr = cy + amp + (n[p] && n[p].tr != null ? n[p].tr : 0);
+          // rise to peak
+          d += ` C${x+cp},${pk} ${x+240-cp},${pk} ${x+240},${cy}`;
+          // fall to trough
+          d += ` C${x+240+cp},${tr} ${x+480-cp},${tr} ${x+480},${cy}`;
+        }
+        return d;
+      }
+
+      const cy = 60;
+      // State A: calm sine, amp 28
+      const pathA = sine3(0, cy, 28);
+      // State B: higher amplitude erratic — per-period amplitude variation
+      const pathB = sine3(0, cy, 46, [
+        { pk:  4, tr: -4 },
+        { pk: -6, tr:  8 },
+        { pk:  2, tr: -2 },
+      ]);
+      // State C: phase-shifted — start mid-wave, asymmetric CPs
+      const pathC = sine3(0, cy, 36, [
+        { pk: -10, tr: 14 },
+        { pk:  12, tr: -8 },
+        { pk:  -6, tr: 10 },
+      ]);
+
+      // SMIL values string: A → B → C → A (seamless loop)
+      const vals   = `${pathA};${pathB};${pathC};${pathA}`;
+      const spline = '0.42 0 0.58 1';
+      const splines = `${spline};${spline};${spline}`;
+
+      const dur = '4s';
+
+      return (
+        <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', opacity }}>
+          <svg
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+            style={{ width: '100%', height: '100%' }}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              {/* fade-in / fade-out at edges */}
+              <linearGradient id={gradId} x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0"    stopColor={color} stopOpacity="0" />
+                <stop offset="0.08" stopColor={color} stopOpacity="1" />
+                <stop offset="0.92" stopColor={color} stopOpacity="1" />
+                <stop offset="1"    stopColor={color} stopOpacity="0" />
+              </linearGradient>
+
+              {/* glow bloom filter — thick blurred halo */}
+              <filter id={glowId} x="-5%" y="-80%" width="110%" height="260%" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                <feColorMatrix in="blur" type="matrix"
+                  values={`0 0 0 0 0
+                           0 0 0 0 0.79
+                           0 0 0 0 0.655
+                           0 0 0 0.85 0`}
+                  result="tinted" />
+                <feMerge>
+                  <feMergeNode in="tinted" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+
+              {/* subtler ghost filter */}
+              <filter id={glowId2} x="-5%" y="-80%" width="110%" height="260%" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            {/* ── Layer 1: glow bloom (thick, blurred behind) ── */}
+            <path fill="none" stroke={color} strokeWidth="6" strokeLinecap="round"
+                  filter={`url(#${glowId})`} opacity="0.35">
+              <animate attributeName="d"
+                values={vals} dur={dur}
+                calcMode="spline" keyTimes="0;0.33;0.66;1"
+                keySplines={splines}
+                repeatCount="indefinite" />
+            </path>
+
+            {/* ── Layer 2: ghost persistence trace (lags 1.3s behind) ── */}
+            <path fill="none" stroke={`url(#${gradId})`} strokeWidth="1.5" strokeLinecap="round"
+                  opacity="0.22">
+              <animate attributeName="d"
+                values={vals} dur={dur} begin="-1.3s"
+                calcMode="spline" keyTimes="0;0.33;0.66;1"
+                keySplines={splines}
+                repeatCount="indefinite" />
+            </path>
+
+            {/* ── Layer 3: primary sharp trace ── */}
+            <path fill="none" strokeLinecap="round" strokeWidth="2.5"
+                  stroke={`url(#${gradId})`}
+                  filter={`url(#${glowId2})`}>
+              <animate attributeName="d"
+                values={vals} dur={dur}
+                calcMode="spline" keyTimes="0;0.33;0.66;1"
+                keySplines={splines}
+                repeatCount="indefinite" />
+            </path>
+          </svg>
+        </div>
+      );
+    }
+
+    window.Waveform = Waveform;
+  </script>
+
+  <!-- ── Navigation ── -->
+  <script type="text/babel">
+    function LogoMark({ size = 36, light = false }) {
+      return (
+        <img
+          src="Vibmon_logo.png"
+          alt="Vibmon logo"
+          style={{
+            height: size,
+            width: 'auto',
+            display: 'block',
+            objectFit: 'contain',
+            filter: light ? 'brightness(0) invert(1)' : 'none',
+          }}
+        />
+      );
+    }
+
+    function HamburgerIcon() {
+      return (
+        <svg width={20} height={20} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
+          <line x1="3" y1="5"  x2="17" y2="5"  />
+          <line x1="3" y1="10" x2="17" y2="10" />
+          <line x1="3" y1="15" x2="17" y2="15" />
+        </svg>
+      );
+    }
+    function CloseIcon() {
+      return (
+        <svg width={20} height={20} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
+          <line x1="4" y1="4" x2="16" y2="16" />
+          <line x1="16" y1="4" x2="4"  y2="16" />
+        </svg>
+      );
+    }
+
+    function Nav({ page, onNav }) {
+      const [open, setOpen] = React.useState(false);
+      const links = [
+        { id: 'home',        label: 'Home' },
+        { id: 'about',       label: 'About' },
+        { id: 'engineering', label: 'Engineering' },
+        { id: 'medical',     label: 'Medical' },
+      ];
+      const navigate = (id) => { onNav(id); setOpen(false); };
+
+      return (
+        <nav style={navStyles.bar}>
+          {/* ── Top bar ── */}
+          <div className="vb-nav-inner" style={navStyles.inner}>
+            <div style={navStyles.left}>
+              <div style={navStyles.brand} onClick={() => navigate('home')}>
+                <LogoMark size={80} />
+                <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+                  <span style={navStyles.brandName}>VIBMON</span>
+                  <span style={navStyles.brandSub}>INSTRUMENTS · MEDICALS</span>
+                </div>
+              </div>
+              {/* Desktop links */}
+              <div className="vb-nav-links" style={navStyles.links}>
+                {links.map(l => (
+                  <a key={l.id} onClick={() => navigate(l.id)}
+                     style={{ ...navStyles.link, ...(page === l.id ? navStyles.linkActive : {}) }}>
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop CTA */}
+            <a onClick={() => navigate('contact')} className="vb-nav-cta-desktop" style={navStyles.cta}>
+              Contact us
+            </a>
+
+            {/* Hamburger — mobile only */}
+            <button
+              className="vb-hamburger"
+              onClick={() => setOpen(o => !o)}
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-expanded={open}
+              style={navStyles.burger}
+            >
+              {open ? <CloseIcon /> : <HamburgerIcon />}
+            </button>
+          </div>
+
+          {/* ── Mobile drawer ── */}
+          {open && (
+            <div style={navStyles.drawer}>
+              {links.map(l => {
+                const active = page === l.id;
+                return (
+                  <a key={l.id} onClick={() => navigate(l.id)}
+                     style={{ ...navStyles.drawerLink, ...(active ? navStyles.drawerLinkActive : {}) }}>
+                    <span>{l.label}</span>
+                    {active && <span style={navStyles.activeDot} />}
+                  </a>
+                );
+              })}
+              <div style={navStyles.drawerRule} />
+              <div style={{ padding: '4px 20px 24px' }}>
+                <a onClick={() => navigate('contact')} style={navStyles.drawerCta}>
+                  Contact us <Icon name="arrowRight" size={16} />
+                </a>
+              </div>
+            </div>
+          )}
+        </nav>
+      );
+    }
+
+    const navStyles = {
+      bar:      { position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid #E2E8F0' },
+      inner:    { maxWidth: 1280, margin: '0 auto', height: 88, padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
+      left:     { display: 'flex', alignItems: 'center', gap: 40 },
+      brand:    { display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer' },
+      brandName:{ fontWeight: 800, fontSize: 15, letterSpacing: '-0.01em', color: '#0A1628' },
+      brandSub: { fontWeight: 600, fontSize: 8, letterSpacing: '0.18em', color: '#4A5568', marginTop: 3 },
+      links:    { display: 'flex', gap: 28 },
+      link:      { fontSize: 14, fontWeight: 500, color: '#4A5568', textDecoration: 'none', cursor: 'pointer', padding: '4px 0', fontFamily: "'Space Grotesk', system-ui, sans-serif" },
+      linkActive:{ color: '#0A1628', fontWeight: 700, borderBottom: '2px solid #00C9A7' },
+      cta:       { background: '#00C9A7', color: '#0A1628', padding: '10px 18px', borderRadius: 2, fontWeight: 600, fontSize: 13, textDecoration: 'none', cursor: 'pointer', letterSpacing: '0.01em', whiteSpace: 'nowrap' },
+      /* hamburger button — hidden by default, shown via CSS class on mobile */
+      burger:    { display: 'none', alignItems: 'center', justifyContent: 'center', background: 'none', border: '1.5px solid #CBD5E0', borderRadius: 4, padding: '8px 10px', cursor: 'pointer', color: '#0A1628', lineHeight: 0, flexShrink: 0 },
+      /* mobile drawer */
+      drawer:    { borderTop: '2px solid #0A1628', background: '#fff', boxShadow: '0 12px 32px rgba(10,22,40,0.14)' },
+      drawerLink:{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '17px 24px', fontSize: 17, fontWeight: 500, color: '#4A5568', cursor: 'pointer', borderBottom: '1px solid #F0F2F5', fontFamily: "'Space Grotesk', system-ui, sans-serif", letterSpacing: '-0.01em' },
+      drawerLinkActive: { color: '#0A1628', fontWeight: 700, background: '#F5F7FA', borderLeft: '3px solid #00C9A7', paddingLeft: 21 },
+      activeDot: { width: 6, height: 6, borderRadius: 99, background: '#00C9A7', flexShrink: 0 },
+      drawerRule: { height: 1, background: '#E2E8F0', margin: '8px 24px' },
+      drawerCta:  { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, background: '#00C9A7', color: '#0A1628', padding: '15px 24px', borderRadius: 2, fontWeight: 700, fontSize: 16, cursor: 'pointer', fontFamily: "'Space Grotesk', system-ui, sans-serif" },
+    };
+
+    window.Nav = Nav;
+    window.LogoMark = LogoMark;
+  </script>
+
+  <!-- ── Hero, StatStrip, DivisionSplit ── -->
+  <script type="text/babel">
+    function Hero({ onNav }) {
+      return (
+        <section style={hStyles.wrap}>
+          <Waveform />
+          <div className="vb-hero-inner" style={hStyles.inner}>
+            <Reveal>
+              <span style={hStyles.eyebrow}>
+                <span className="vb-pulse-dot" style={{ display:'inline-block', width:6, height:6, borderRadius:999, background:'#00C9A7', marginRight:8, verticalAlign:'middle' }}></span>
+                VIBMON · PUNE, INDIA
+              </span>
+            </Reveal>
+            <Reveal delay={1}>
+              <h1 className="vb-hero-h1" style={hStyles.h1}>
+                Vibration diagnostics for industry.<br/>
+                <span style={{ color: '#00C9A7' }}>Medical equipment</span> for healthcare.
+              </h1>
+            </Reveal>
+            <Reveal delay={2}>
+              <p style={hStyles.sub}>Pune-based specialists with 20+ years on the plant floor — delivering condition monitoring and vibration analysis services across India, and supplying RT-PCR systems and diagnostic instruments to NABL-accredited laboratories and hospitals.</p>
+            </Reveal>
+            <Reveal delay={3}>
+              <div style={hStyles.ctas}>
+                <a onClick={() => onNav('engineering')} className="vb-btn-primary" style={hStyles.primary}>
+                  Explore engineering services <Icon name="arrowRight" size={16} />
+                </a>
+                <a onClick={() => onNav('medical')} style={hStyles.ghost}>View medical division</a>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      );
+    }
+    const hStyles = {
+      wrap:    { position: 'relative', background: '#0A1628', color: '#fff', overflow: 'hidden', minHeight: 600 },
+      inner:   { position: 'relative', zIndex: 2, maxWidth: 1280, margin: '0 auto', padding: '120px 32px 100px', display: 'grid', gridTemplateColumns: '1fr', gap: 28 },
+      eyebrow: { fontSize: 12, letterSpacing: '0.16em', fontWeight: 600, color: '#00C9A7', textTransform: 'uppercase' },
+      h1:      { fontFamily: "'Space Grotesk', system-ui, sans-serif", fontSize: 72, lineHeight: 1.04, letterSpacing: '-0.025em', fontWeight: 700, margin: 0, maxWidth: 900 },
+      sub:     { fontSize: 20, lineHeight: 1.55, color: 'rgba(255,255,255,0.72)', maxWidth: 640, margin: 0 },
+      ctas:    { display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8 },
+      primary: { display: 'inline-flex', alignItems: 'center', gap: 10, background: '#00C9A7', color: '#0A1628', padding: '16px 24px', borderRadius: 2, fontWeight: 600, fontSize: 15, textDecoration: 'none', cursor: 'pointer' },
+      ghost:   { display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: '#fff', padding: '16px 24px', borderRadius: 2, fontWeight: 600, fontSize: 15, border: '1px solid rgba(255,255,255,0.24)', cursor: 'pointer' },
+    };
+    window.Hero = Hero;
+
+    function StatStrip() {
+      const stats = [
+        { v: 20,          suf: '+', l: 'years of field experience' },
+        { v: 500,         suf: '+', l: 'industrial assets diagnosed' },
+        { v: 2,           suf: '',  l: 'specialised divisions' },
+        { v: 'Pan-India', suf: '',  l: 'service coverage' },
+      ];
+      return (
+        <section style={ssStyles.wrap}>
+          <div className="vb-stat-inner" style={ssStyles.inner}>
+            {stats.map((s, i) => (
+              <Reveal key={i} delay={i + 1} style={ssStyles.cell}>
+                <div style={ssStyles.v}>
+                  {typeof s.v === 'number' ? <Counter to={s.v} suffix={s.suf} /> : s.v}
+                </div>
+                <div style={ssStyles.l}>{s.l}</div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      );
+    }
+    const ssStyles = {
+      wrap:  { background: '#0A1628', borderTop: '1px solid rgba(255,255,255,0.08)', color: '#fff' },
+      inner: { maxWidth: 1280, margin: '0 auto', padding: '40px 32px', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 32 },
+      cell:  { display: 'flex', flexDirection: 'column', gap: 6 },
+      v:     { fontFamily: "'Barlow Condensed', system-ui, sans-serif", fontSize: 56, fontWeight: 700, letterSpacing: '0', lineHeight: 1 },
+      l:     { fontSize: 13, color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 },
+    };
+    window.StatStrip = StatStrip;
+
+    function DivisionSplit({ onNav }) {
+      return (
+        <section className="vb-div-split" style={dsStyles.wrap}>
+          <div className="vb-div-half" onClick={() => onNav('engineering')} style={{ ...dsStyles.half, ...dsStyles.eng }}>
+            <div style={dsStyles.halfInner}>
+              <span style={{ ...dsStyles.eb, color: '#00C9A7' }}>ENGINEERING DIVISION</span>
+              <h2 style={dsStyles.title}>Vibration analysis &<br/>predictive maintenance</h2>
+              <p style={dsStyles.body}>On-site FFT spectrum analysis and order tracking to detect imbalance, misalignment, and bearing wear before failure. ISO 10816-compliant reports with 24-hour turnaround.</p>
+              <div style={dsStyles.lk}>Explore engineering <Icon name="arrowRight" size={16} /></div>
+            </div>
+          </div>
+          <div className="vb-div-half" onClick={() => onNav('medical')} style={{ ...dsStyles.half, ...dsStyles.med }}>
+            <div style={dsStyles.halfInner}>
+              <span style={{ ...dsStyles.eb, color: '#38A169' }}>MEDICAL DIVISION</span>
+              <h2 style={{ ...dsStyles.title, color: '#0A1628' }}>RT-PCR systems &<br/>diagnostic instruments</h2>
+              <p style={{ ...dsStyles.body, color: '#4A5568' }}>Validated RT-PCR platforms, diagnostic instruments, and sterile consumables — supplied to NABL-accredited laboratories and government hospitals with full lot traceability and regulatory documentation.</p>
+              <div style={{ ...dsStyles.lk, color: '#0A1628' }}>Explore medical <Icon name="arrowRight" size={16} /></div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+    const dsStyles = {
+      wrap:     { display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 480 },
+      half:     { padding: '80px 48px', cursor: 'pointer', transition: 'all .2s' },
+      eng:      { background: '#0A1628', color: '#fff' },
+      med:      { background: '#fff', borderLeft: '1px solid #E2E8F0' },
+      halfInner:{ maxWidth: 520, marginLeft: 'auto', marginRight: 'auto', display: 'flex', flexDirection: 'column', gap: 18 },
+      eb:       { fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase' },
+      title:    { fontFamily: "'Space Grotesk', system-ui, sans-serif", fontSize: 40, lineHeight: 1.1, letterSpacing: '-0.02em', fontWeight: 700, margin: 0, color: '#fff' },
+      body:     { fontSize: 17, lineHeight: 1.6, color: 'rgba(255,255,255,0.72)', margin: 0 },
+      lk:       { display: 'inline-flex', alignItems: 'center', gap: 8, color: '#00C9A7', fontWeight: 600, fontSize: 14, marginTop: 6 },
+    };
+    window.DivisionSplit = DivisionSplit;
+  </script>
+
+  <!-- ── Shared sections: ServiceCard, IndustryRow, WhyVibmon, CTABanner, Footer ── -->
+  <script type="text/babel">
+    function ServiceCard({ icon, eyebrow, title, body, dark, accent = '#00C9A7' }) {
+      const cardStyle = dark
+        ? { background: '#101F38', color: '#fff', border: '1px solid rgba(255,255,255,0.16)' }
+        : { background: '#fff', color: '#0A1628', border: '1px solid #E2E8F0', boxShadow: '0 1px 2px rgba(10,22,40,0.06), 0 2px 8px rgba(10,22,40,0.04)' };
+      return (
+        <div className={`vb-lift ${dark ? 'vb-lift-dark' : ''}`} style={{ ...scStyles.card, ...cardStyle }}>
+          <div style={{ ...scStyles.icon, color: accent }}>
+            <Icon name={icon} size={28} stroke={1.5} />
+          </div>
+          <span style={{ ...scStyles.eb, color: accent }}>{eyebrow}</span>
+          <h3 style={scStyles.t}>{title}</h3>
+          <p style={{ ...scStyles.b, color: dark ? 'rgba(255,255,255,0.72)' : '#4A5568' }}>{body}</p>
+          <a className="vb-link-uline" style={{ ...scStyles.lk, color: accent }}>Learn more <Icon name="arrowRight" size={14} /></a>
+        </div>
+      );
+    }
+    const scStyles = {
+      card: { padding: 28, borderRadius: 8, display: 'flex', flexDirection: 'column', gap: 12, transition: 'transform .2s' },
+      icon: { width: 48, height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid currentColor', borderRadius: 4, opacity: 0.9 },
+      eb:   { fontSize: 11, letterSpacing: '0.12em', fontWeight: 700, textTransform: 'uppercase', marginTop: 4 },
+      t:    { fontSize: 22, fontWeight: 700, letterSpacing: '-0.01em', margin: 0 },
+      b:    { fontSize: 15, lineHeight: 1.6, margin: 0 },
+      lk:   { display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 600, fontSize: 14, marginTop: 8, cursor: 'pointer' },
+    };
+    window.ServiceCard = ServiceCard;
+
+    function IndustryRow() {
+      const items = [
+        { i: 'factory',    l: 'Power plants' },
+        { i: 'cog',        l: 'Manufacturing' },
+        { i: 'gauge',      l: 'Oil & gas' },
+        { i: 'flask',      l: 'Pharma' },
+        { i: 'buildingMed',l: 'Hospitals' },
+      ];
+      return (
+        <section style={{ background: '#fff', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
+          <div style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 32px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 32, flexWrap: 'wrap', gap: 8 }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase', color: '#4A5568' }}>INDUSTRIES SERVED</span>
+              <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 12, color: '#718096' }}>05 / sectors</span>
+            </div>
+            <div className="vb-industry-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 24 }}>
+              {items.map((it, i) => (
+                <Reveal key={i} delay={i + 1} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14, padding: '20px 0', borderTop: '1px solid #E2E8F0' }}>
+                  <div style={{ color: '#0A1628' }}><Icon name={it.i} size={32} /></div>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: '#0A1628' }}>{it.l}</div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+    window.IndustryRow = IndustryRow;
+
+    function WhyVibmon() {
+      const items = [
+        { i: 'award', t: '20+ years of field diagnostics',      b: 'Our engineers have worked turbine halls, compressor decks, and pump stations across India since 2003. Every report is grounded in measurable field data, not generic benchmarks.' },
+        { i: 'shield',t: 'NABL-compliant documentation',        b: 'Medical products are supplied with full lot traceability and regulatory documentation to satisfy NABL accreditation requirements. Compliance is standard, not optional.' },
+        { i: 'clock', t: 'Reports within 24 business hours',    b: 'Vibration analysis reports — including full FFT spectra, ISO 10816 severity ratings, and prioritised corrective actions — are delivered the next business day after site work.' },
+        { i: 'zap',   t: 'One engineering standard, two divisions', b: 'The calibration discipline governing our industrial measurement instruments applies equally to every medical product we source and supply. Precision is not division-specific.' },
+      ];
+      return (
+        <section style={{ background: '#F5F7FA' }}>
+          <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 32px' }}>
+            <div style={{ maxWidth: 640, marginBottom: 48 }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase', color: '#4A5568' }}>WHY VIBMON</span>
+              <h2 style={{ fontSize: 44, fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.1, marginTop: 12 }}>Built around precision, not promises.</h2>
+            </div>
+            <div className="vb-why-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 24 }}>
+              {items.map((it, i) => (
+                <Reveal key={i} delay={i + 1} className="vb-lift" style={{ background: '#fff', padding: 24, borderRadius: 8, border: '1px solid #E2E8F0', display: 'flex', flexDirection: 'column', gap: 14 }}>
+                  <div style={{ color: '#00C9A7' }}><Icon name={it.i} size={28} /></div>
+                  <div style={{ fontSize: 18, fontWeight: 700, color: '#0A1628', fontFamily: "'Space Grotesk',sans-serif" }}>{it.t}</div>
+                  <div style={{ fontSize: 14, lineHeight: 1.6, color: '#4A5568' }}>{it.b}</div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+    window.WhyVibmon = WhyVibmon;
+
+    function CTABanner({ onNav }) {
+      return (
+        <section style={{ background: '#0A1628', position: 'relative', overflow: 'hidden' }}>
+          <Waveform opacity={0.3} />
+          <div style={{ position: 'relative', zIndex: 2, maxWidth: 1280, margin: '0 auto', padding: '80px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, flexWrap: 'wrap' }}>
+            <div>
+              <h2 style={{ color: '#fff', fontSize: 40, fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.1, margin: 0, maxWidth: 640 }}>Request a site survey or product quote.</h2>
+              <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 17, marginTop: 12, maxWidth: 560 }}>Tell us about the asset, the installation, or the laboratory. Our engineering and medical teams respond within one business day.</p>
+            </div>
+            <a onClick={() => onNav('contact')} style={{ background: '#00C9A7', color: '#0A1628', padding: '16px 28px', borderRadius: 2, fontWeight: 700, fontSize: 15, textDecoration: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
+              Contact Vibmon <Icon name="arrowRight" size={16} />
+            </a>
+          </div>
+        </section>
+      );
+    }
+    window.CTABanner = CTABanner;
+
+    function Footer() {
+      return (
+        <footer style={{ background: '#06101F', color: 'rgba(255,255,255,0.72)', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          <div className="vb-footer-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 32px 32px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: 48 }}>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                <LogoMark size={80} light />
+                <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+                  <span style={{ fontWeight: 800, fontSize: 16, color: '#fff' }}>VIBMON</span>
+                  <span style={{ fontWeight: 600, fontSize: 9, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.5)', marginTop: 4 }}>INSTRUMENTS · MEDICALS</span>
+                </div>
+              </div>
+              <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.6, maxWidth: 320 }}>Precision in vibration. Excellence in healthcare. Pune, India.</p>
+            </div>
+            <div>
+              <div style={{ fontSize: 11, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase', color: '#00C9A7', marginBottom: 14 }}>Engineering</div>
+              {['Vibration & sound analysis', 'Condition monitoring', 'Fault diagnosis', 'On-site reporting'].map(l => <div key={l} style={{ fontSize: 14, marginBottom: 8 }}>{l}</div>)}
+            </div>
+            <div>
+              <div style={{ fontSize: 11, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase', color: '#38A169', marginBottom: 14 }}>Medical</div>
+              {['RT-PCR systems', 'Diagnostic instruments', 'Catheters & consumables', 'Compliance & supply'].map(l => <div key={l} style={{ fontSize: 14, marginBottom: 8 }}>{l}</div>)}
+            </div>
+            <div>
+              <div style={{ fontSize: 11, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase', color: '#fff', marginBottom: 14 }}>Contact</div>
+              <div style={{ fontSize: 14, marginBottom: 8 }}>Pune, Maharashtra, India</div>
+              <div style={{ fontSize: 14, marginBottom: 8 }}>+91 9421019235</div>
+              <div style={{ fontSize: 14, marginBottom: 8 }}>vibmon@hotmail.com</div>
+            </div>
+          </div>
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '20px 32px', maxWidth: 1280, margin: '0 auto', display: 'flex', justifyContent: 'space-between', fontSize: 12, color: 'rgba(255,255,255,0.5)', flexWrap: 'wrap', gap: 8 }}>
+            <span>© 2026 Vibmon Instruments and Medicals.</span>
+            <span style={{ fontFamily: 'JetBrains Mono, monospace' }}>v.2026.05</span>
+          </div>
+        </footer>
+      );
+    }
+    window.Footer = Footer;
+  </script>
+
+  <!-- ── Pages: Engineering, Medical, About, Contact ── -->
+  <script type="text/babel">
+    function EngineeringPage({ onNav }) {
+      return (
+        <main style={{ background: '#0A1628', color: '#fff' }}>
+          <section style={{ position: 'relative', overflow: 'hidden' }}>
+            <Waveform />
+            <div style={{ position: 'relative', zIndex: 2, maxWidth: 1280, margin: '0 auto', padding: '120px 32px 80px' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.16em', fontWeight: 700, color: '#00C9A7', textTransform: 'uppercase' }}>ENGINEERING DIVISION</span>
+              <h1 style={{ fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: 1.05, letterSpacing: '-0.025em', fontWeight: 800, marginTop: 18, maxWidth: 900 }}>Vibration analysis and condition monitoring for India's critical industries.</h1>
+              <p style={{ fontSize: 19, color: 'rgba(255,255,255,0.72)', marginTop: 18, maxWidth: 640 }}>On-site FFT diagnostics, continuous condition monitoring, and root-cause fault diagnosis for rotating machinery — with ISO 10816-compliant reporting and 24-hour turnaround from Pune.</p>
+            </div>
+          </section>
+          <section style={{ background: '#0A1628', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+            <div className="vb-svc-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '80px 32px', display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+              <ServiceCard dark icon="activity" eyebrow="01 / Analysis"   title="Vibration & Sound Analysis"                    body="On-site FFT spectrum analysis and acoustic measurement on turbines, motors, fans, compressors, and pumps. Identifies imbalance, misalignment, bearing wear, and looseness — with ISO 10816 severity classification and corrective priorities issued the following business day." />
+              <ServiceCard dark icon="gauge"    eyebrow="02 / Monitoring" title="Condition Monitoring & Predictive Maintenance"   body="Periodic or continuous monitoring with configurable alarm thresholds and trended velocity and acceleration data. Developing faults are identified weeks before failure — reducing unplanned downtime without over-maintenance." />
+              <ServiceCard dark icon="cog"      eyebrow="03 / Diagnosis"  title="Fault Diagnosis of Rotating Machinery"           body="Root-cause diagnosis for turbines, compressors, pumps, and gearboxes using time-waveform analysis, cepstrum, and waterfall plots. Diagnosis report with repair recommendations and re-test criteria delivered within 24 hours." />
+            </div>
+          </section>
+          <section style={{ background: '#101F38', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 32px' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, color: '#00C9A7', textTransform: 'uppercase' }}>SAMPLE READOUT</span>
+              <div style={{ marginTop: 24, padding: 24, border: '1px solid rgba(255,255,255,0.16)', borderRadius: 8, background: '#0A1628', overflowX: 'auto' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14, fontFamily: 'JetBrains Mono, monospace', fontSize: 11, color: 'rgba(255,255,255,0.5)', flexWrap: 'wrap', gap: 8 }}>
+                  <span>FFT · turbine 4 · 2026-05-04 14:21</span>
+                  <span style={{ color: '#00C9A7' }}><span className="vb-pulse-dot" style={{ display:'inline-block', width:6, height:6, borderRadius:999, background:'#00C9A7', marginRight:6, verticalAlign:'middle' }}></span>live</span>
+                </div>
+                <svg viewBox="0 0 1200 240" style={{ width: '100%', height: 'auto', minWidth: 300 }}>
+                  {Array.from({ length: 60 }).map((_, i) => {
+                    const h = Math.abs(Math.sin(i * 0.4) * Math.cos(i * 0.13)) * 200 + 8;
+                    const peak = i === 18 || i === 36;
+                    return <rect className="vb-bar" style={{ animationDelay: `${i * 12}ms` }} key={i} x={i * 20 + 4} y={240 - h} width={12} height={h} fill={peak ? '#00C9A7' : 'rgba(255,255,255,0.4)'} />;
+                  })}
+                  <line x1="0" y1="220" x2="1200" y2="220" stroke="rgba(255,255,255,0.16)" />
+                  <line x1="368" y1="0" x2="368" y2="240" stroke="#00C9A7" strokeDasharray="2 4" opacity="0.5" />
+                </svg>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, marginTop: 20, fontFamily: 'JetBrains Mono, monospace', fontSize: 13, color: '#fff' }}>
+                  <div><div style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.1em' }}>RMS</div>4.83 mm/s</div>
+                  <div><div style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.1em' }}>RPM</div>1,486</div>
+                  <div><div style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.1em' }}>1× FREQ</div>24.7 Hz</div>
+                  <div><div style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.1em' }}>ZONE</div><span style={{ color: '#FBBF24' }}>B · alert</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <CTABanner onNav={onNav} />
+        </main>
+      );
+    }
+    window.EngineeringPage = EngineeringPage;
+
+    function MedicalPage({ onNav }) {
+      return (
+        <main style={{ background: '#fff', color: '#0A1628' }}>
+          <section style={{ background: '#F5F7FA' }}>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '120px 32px 80px' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.16em', fontWeight: 700, color: '#38A169', textTransform: 'uppercase' }}>MEDICAL DIVISION</span>
+              <h1 style={{ fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: 1.05, letterSpacing: '-0.025em', fontWeight: 800, marginTop: 18, maxWidth: 900 }}>RT-PCR systems, diagnostic instruments, and clinical consumables for India's healthcare sector.</h1>
+              <p style={{ fontSize: 19, color: '#4A5568', marginTop: 18, maxWidth: 640 }}>Vibmon supplies validated medical equipment and reagents to NABL-accredited laboratories, government hospitals, and private diagnostic centres — with full traceability documentation and pan-India logistics.</p>
+            </div>
+          </section>
+          <section>
+            <div className="vb-svc-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '80px 32px', display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+              <ServiceCard accent="#38A169" icon="dropletPlus" eyebrow="01 / Molecular"   title="RT-PCR Systems & Reagents"   body="Supply and installation of real-time PCR platforms with validated reagent kits and full lot traceability. Documentation meets NABL accreditation requirements. Cold-chain logistics managed end-to-end; on-site application training included." />
+              <ServiceCard accent="#38A169" icon="microscope"  eyebrow="02 / Diagnostics" title="Diagnostic Instruments"       body="Bench-top and floor-standing diagnostic platforms for pathology, haematology, biochemistry, and immunology. Sourced from regulatory-approved manufacturers and supported with calibration certification, AMC contracts, and pan-India service coverage." />
+              <ServiceCard accent="#38A169" icon="syringe"     eyebrow="03 / Consumables" title="Catheters & Consumables"      body="Sterile catheters, tubing sets, and clinical consumables supplied to hospitals, ICUs, and diagnostic laboratories. Full batch traceability documentation as standard. Pan-India distribution with cold-chain handling for temperature-sensitive products." />
+            </div>
+          </section>
+          <CTABanner onNav={onNav} />
+        </main>
+      );
+    }
+    window.MedicalPage = MedicalPage;
+
+    function AboutPage({ onNav }) {
+      const milestones = [
+        { y: '2003', t: 'Founded in Pune',                b: 'Established as a vibration-analysis consultancy serving Maharashtra\'s manufacturing and power generation sectors.' },
+        { y: '2009', t: 'Condition monitoring contracts', b: 'First continuous-monitoring agreements with power-plant customers; engineering team expands to pan-Maharashtra coverage.' },
+        { y: '2015', t: 'Medical division launched',      b: 'Diagnostic-instrument and reagent supply begins, anchored by NABL-compliant documentation standards from day one.' },
+        { y: '2021', t: 'RT-PCR supply scale-up',         b: 'Molecular diagnostics supply expanded rapidly to government and private laboratories to meet pandemic-period demand.' },
+        { y: '2026', t: '500+ assets diagnosed',          b: 'Two divisions, pan-India service coverage, and twenty-plus years of uninterrupted measurement discipline.' },
+      ];
+      return (
+        <main style={{ background: '#fff' }}>
+          <section style={{ background: '#F5F7FA' }}>
+            <div className="vb-about-hero-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '120px 32px 80px', display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'end' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.16em', fontWeight: 700, color: '#4A5568', textTransform: 'uppercase' }}>ABOUT VIBMON</span>
+              <h1 style={{ fontSize: 'clamp(28px, 4vw, 56px)', fontWeight: 800, letterSpacing: '-0.025em', lineHeight: 1.06, margin: 0 }}>We measure what industry cannot afford to guess, and supply what clinical labs depend on.</h1>
+            </div>
+          </section>
+          <section>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 32px' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, color: '#4A5568', textTransform: 'uppercase' }}>MILESTONES</span>
+              <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: '120px 1fr', rowGap: 32, columnGap: 32 }}>
+                {milestones.map((m, i) => (
+                  <React.Fragment key={i}>
+                    <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 18, fontWeight: 600, color: '#00C9A7', borderTop: '1px solid #E2E8F0', paddingTop: 16 }}>{m.y}</div>
+                    <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: 16 }}>
+                      <div style={{ fontSize: 22, fontWeight: 700, color: '#0A1628' }}>{m.t}</div>
+                      <div style={{ fontSize: 15, color: '#4A5568', marginTop: 6, lineHeight: 1.6, maxWidth: 720 }}>{m.b}</div>
+                    </div>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </section>
+          <section className="vb-about-div-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <div style={{ background: '#0A1628', color: '#fff', padding: '80px 48px' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, color: '#00C9A7', textTransform: 'uppercase' }}>VIBRATION ENGINEERING</span>
+              <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.015em', marginTop: 14, lineHeight: 1.2 }}>Built on plant-floor experience.</h2>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.72)', marginTop: 14, lineHeight: 1.6, maxWidth: 460 }}>FFT spectrum analysis, order tracking, and ISO 10816 severity zoning — applied by engineers who have walked compressor decks and turbine halls since 2003. We do not subcontract diagnostic work.</p>
+            </div>
+            <div style={{ background: '#fff', padding: '80px 48px', borderLeft: '1px solid #E2E8F0' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, color: '#38A169', textTransform: 'uppercase' }}>MEDICAL EQUIPMENT</span>
+              <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.015em', marginTop: 14, lineHeight: 1.2, color: '#0A1628' }}>Compliance is the calibration.</h2>
+              <p style={{ fontSize: 16, color: '#4A5568', marginTop: 14, lineHeight: 1.6, maxWidth: 460 }}>Validated reagents, traceable consumables, and certified diagnostic platforms. Every product is supplied with documentation satisfying NABL accreditation and government hospital procurement standards.</p>
+            </div>
+          </section>
+          <section style={{ background: '#F5F7FA' }}>
+            <div className="vb-about-hq-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 32px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
+              <div>
+                <span style={{ fontSize: 12, letterSpacing: '0.14em', fontWeight: 700, color: '#4A5568', textTransform: 'uppercase' }}>HEADQUARTERS</span>
+                <h2 style={{ fontSize: 32, fontWeight: 700, marginTop: 12, color: '#0A1628' }}>Pune, India</h2>
+                <p style={{ marginTop: 12, color: '#4A5568', lineHeight: 1.6 }}>Operations centre and engineering workshop — Pune, Maharashtra. Service teams deployed pan-India.</p>
+              </div>
+              <div style={{ height: 300, borderRadius: 8, overflow: 'hidden', border: '1px solid #E2E8F0' }}>
+                <iframe
+                  title="Vibmon Headquarters — Pune, India"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242226.16982628968!2d73.72166!3d18.524801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1746000000000!5m2!1sen!2sin"
+                  width="100%" height="100%" style={{ border: 0, display: 'block' }}
+                  allowFullScreen="" loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+          </section>
+        </main>
+      );
+    }
+    window.AboutPage = AboutPage;
+
+    function ContactBlock({ icon, label, value }) {
+      return (
+        <div style={{ padding: 18, border: '1px solid #E2E8F0', borderRadius: 8, display: 'flex', gap: 14, alignItems: 'flex-start', background: '#fff' }}>
+          <div style={{ color: '#00C9A7', flexShrink: 0 }}><Icon name={icon} size={22} /></div>
+          <div>
+            <div style={{ fontSize: 11, letterSpacing: '0.12em', fontWeight: 700, color: '#4A5568', textTransform: 'uppercase' }}>{label}</div>
+            <div style={{ fontSize: 16, fontWeight: 600, color: '#0A1628', marginTop: 4, lineHeight: 1.4 }}>{value}</div>
+          </div>
+        </div>
+      );
+    }
+
+    function ContactForm() {
+      const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
+      const [type, setType] = React.useState('Engineering enquiry');
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('sending');
+        const formData = new FormData(e.target);
+        try {
+          const res = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString(),
+          });
+          setStatus(res.ok ? 'sent' : 'error');
+        } catch {
+          setStatus('error');
+        }
+      };
+
+      if (status === 'sent') return (
+        <div style={{ padding: 40, border: '1px solid #38A169', borderRadius: 8, background: '#F0FDF4' }}>
+          <div style={{ color: '#38A169', marginBottom: 14 }}><Icon name="shield" size={32} /></div>
+          <h3 style={{ fontSize: 24, fontWeight: 700, color: '#0A1628' }}>Message received.</h3>
+          <p style={{ color: '#4A5568', marginTop: 8 }}>We'll respond within one business day.</p>
+        </div>
+      );
+
+      const fld = { display: 'flex', flexDirection: 'column', gap: 6 };
+      const lbl = { fontSize: 11, letterSpacing: '0.1em', fontWeight: 700, color: '#4A5568', textTransform: 'uppercase' };
+      const inp = { fontFamily: 'inherit', fontSize: 15, padding: '12px 14px', border: '1px solid #CBD5E0', borderRadius: 4, background: '#fff', outline: 'none', color: '#0A1628', width: '100%', boxSizing: 'border-box' };
+      const busy = status === 'sending';
+
+      return (
+        <form onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" name="contact" style={{ display: 'grid', gap: 18 }}>
+          <input type="hidden" name="form-name" value="contact" />
+          <input name="bot-field" style={{ position:'absolute', left:'-9999px', opacity:0, pointerEvents:'none' }} tabIndex="-1" autoComplete="off" />
+          {status === 'error' && (
+            <div style={{ padding: '12px 16px', background: '#FFF5F5', border: '1px solid #FC8181', borderRadius: 4, color: '#C53030', fontSize: 14 }}>
+              Submission failed. Please email us directly at <strong>vibmon@hotmail.com</strong>
+            </div>
+          )}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(160px,1fr))', gap: 16 }}>
+            <div style={fld}><label style={lbl}>Name</label><input name="name" style={inp} required disabled={busy} /></div>
+            <div style={fld}><label style={lbl}>Company</label><input name="company" style={inp} disabled={busy} /></div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(160px,1fr))', gap: 16 }}>
+            <div style={fld}><label style={lbl}>Email</label><input type="email" name="email" style={inp} required disabled={busy} /></div>
+            <div style={fld}><label style={lbl}>Phone</label><input name="phone" style={inp} placeholder="+91 …" disabled={busy} /></div>
+          </div>
+          <div style={fld}>
+            <label style={lbl}>Enquiry type</label>
+            <select name="enquiry_type" style={inp} value={type} onChange={e => setType(e.target.value)} disabled={busy}>
+              <option>Engineering enquiry</option>
+              <option>Medical enquiry</option>
+            </select>
+          </div>
+          <div style={fld}><label style={lbl}>Message</label><textarea name="message" rows={6} style={{ ...inp, resize: 'vertical' }} required disabled={busy} /></div>
+          <button type="submit" disabled={busy} style={{ background: busy ? '#A0AEC0' : (type.startsWith('Medical') ? '#38A169' : '#00C9A7'), color: type.startsWith('Medical') && !busy ? '#fff' : '#0A1628', padding: '14px 24px', borderRadius: 2, fontWeight: 700, fontSize: 15, border: 'none', cursor: busy ? 'not-allowed' : 'pointer', justifySelf: 'start', display: 'inline-flex', alignItems: 'center', gap: 10, transition: 'background 200ms', opacity: busy ? 0.75 : 1 }}>
+            {busy ? 'Sending…' : <React.Fragment>Send message <Icon name="arrowRight" size={16} /></React.Fragment>}
+          </button>
+        </form>
+      );
+    }
+
+    function ContactPage() {
+      return (
+        <main style={{ background: '#fff' }}>
+          <section style={{ background: '#F5F7FA', borderBottom: '1px solid #E2E8F0' }}>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 32px 64px' }}>
+              <span style={{ fontSize: 12, letterSpacing: '0.16em', fontWeight: 700, color: '#4A5568', textTransform: 'uppercase' }}>CONTACT</span>
+              <h1 style={{ fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 800, letterSpacing: '-0.025em', lineHeight: 1.06, marginTop: 18 }}>Start a conversation about your site, asset, or facility.</h1>
+              <p style={{ fontSize: 18, color: '#4A5568', marginTop: 14, maxWidth: 560 }}>Describe what you're working with — the rotating asset, the installation, or the laboratory. Our engineering and medical teams respond within one business day.</p>
+            </div>
+          </section>
+          <section>
+            <div className="vb-contact-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 32px', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 64 }}>
+              <ContactForm />
+              <div>
+                <div style={{ display: 'grid', gap: 14 }}>
+                  <ContactBlock icon="pin"   label="Visit" value={<>Pune, Maharashtra<br/>India</>} />
+                  <ContactBlock icon="phone" label="Call"  value="+91 9421019235" />
+                  <ContactBlock icon="mail"  label="Email" value="vibmon@hotmail.com" />
+                </div>
+                <div style={{ marginTop: 24, height: 280, borderRadius: 8, overflow: 'hidden', border: '1px solid #E2E8F0' }}>
+                  <iframe
+                    title="Vibmon location — Pune, India"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242226.16982628968!2d73.72166!3d18.524801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1746000000000!5m2!1sen!2sin"
+                    width="100%" height="100%" style={{ border: 0, display: 'block' }}
+                    allowFullScreen="" loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      );
+    }
+    window.ContactPage = ContactPage;
+    window.ContactForm = ContactForm;
+  </script>
+
+  <!-- ── App shell ── -->
+  <script type="text/babel">
+    function HomePage({ onNav }) {
+      return (
+        <main>
+          <Hero onNav={onNav} />
+          <StatStrip />
+          <DivisionSplit onNav={onNav} />
+          <IndustryRow />
+          <WhyVibmon />
+          <CTABanner onNav={onNav} />
+        </main>
+      );
+    }
+
+    const PAGE_META = {
+      home:        { title: 'Vibmon Instruments & Medicals | Vibration Analysis & Medical Equipment, Pune', desc: 'On-site vibration analysis, condition monitoring and predictive maintenance across India. RT-PCR systems and diagnostic instruments supplied to NABL labs and hospitals from Pune.' },
+      about:       { title: 'About Vibmon | 20+ Years in Vibration Analysis & Medical Equipment Supply', desc: 'Founded in Pune in 2003, Vibmon Instruments and Medicals specialises in vibration diagnostics for industry and medical equipment supply for NABL-accredited labs across India.' },
+      engineering: { title: 'Vibration Analysis & Condition Monitoring Services | Vibmon Engineering', desc: 'Vibmon provides on-site vibration analysis, condition monitoring, and fault diagnosis for rotating machinery across India\'s power, manufacturing, and oil & gas sectors.' },
+      medical:     { title: 'RT-PCR Systems & Diagnostic Instruments | Vibmon Medical Division', desc: 'Vibmon supplies RT-PCR systems, diagnostic instruments, and clinical consumables to NABL-accredited labs and hospitals across India. Full traceability and cold-chain logistics.' },
+      contact:     { title: 'Contact Vibmon | Vibration Analysis & Medical Equipment Enquiries, Pune', desc: 'Contact Vibmon Instruments and Medicals in Pune for vibration analysis, condition monitoring, or diagnostic equipment enquiries. Response within one business day.' },
+    };
+
+    function App() {
+      const [page, setPage] = React.useState('home');
+      const onNav = (id) => {
+        setPage(id);
+        window.scrollTo(0, 0);
+        const m = PAGE_META[id] || PAGE_META.home;
+        document.title = m.title;
+        const desc = document.querySelector('meta[name="description"]');
+        if (desc) desc.setAttribute('content', m.desc);
+      };
+      const Page = {
+        home:        HomePage,
+        about:       AboutPage,
+        engineering: EngineeringPage,
+        medical:     MedicalPage,
+        contact:     ContactPage,
+      }[page] || HomePage;
+      return (
+        <div data-screen-label={`Vibmon · ${page}`}>
+          <Nav page={page} onNav={onNav} />
+          <div key={page} className="vb-page-in"><Page onNav={onNav} /></div>
+          <Footer />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

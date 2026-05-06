@@ -1,0 +1,84 @@
+/* Vibmon motion — restrained: fade-ups, slow waveform, hover lifts */
+
+/* Reveal on scroll */
+.vb-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms cubic-bezier(0.2,0.6,0.2,1), transform 600ms cubic-bezier(0.2,0.6,0.2,1);
+  will-change: opacity, transform;
+}
+.vb-reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.vb-reveal[data-delay="1"]{ transition-delay: 80ms; }
+.vb-reveal[data-delay="2"]{ transition-delay: 160ms; }
+.vb-reveal[data-delay="3"]{ transition-delay: 240ms; }
+.vb-reveal[data-delay="4"]{ transition-delay: 320ms; }
+
+/* Hover lift on service cards / why-vibmon cards */
+.vb-lift {
+  transition: transform 200ms cubic-bezier(0.2,0.6,0.2,1), box-shadow 200ms cubic-bezier(0.2,0.6,0.2,1), border-color 200ms;
+}
+.vb-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10,22,40,0.08), 0 12px 32px rgba(10,22,40,0.06);
+}
+.vb-lift-dark:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.32) !important;
+}
+
+/* Link with growing teal underline */
+.vb-link-uline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.vb-link-uline::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: -4px;
+  height: 1.5px;
+  background: currentColor;
+  transition: right 250ms cubic-bezier(0.2,0.6,0.2,1);
+}
+.vb-link-uline:hover::after { right: 0; }
+
+/* Buttons: subtle fill darken on hover */
+.vb-btn-primary { transition: background 200ms, transform 100ms; }
+.vb-btn-primary:hover { background: #00A688 !important; }
+.vb-btn-primary:active { opacity: 0.85; }
+.vb-btn-medical:hover { background: #2F8A57 !important; }
+
+/* Hero waveform: slower drift baked into Waveform.jsx, but keep a global keyframe */
+@keyframes vb-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.vb-pulse-dot { animation: vb-pulse 1.6s ease-in-out infinite; }
+
+/* FFT live trace shimmer */
+@keyframes vb-bar-grow {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+.vb-bar { transform-origin: bottom; animation: vb-bar-grow 700ms cubic-bezier(0.2,0.6,0.2,1) both; }
+
+/* Page-enter fade for route changes */
+@keyframes vb-page-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.vb-page-in { animation: vb-page-in 320ms cubic-bezier(0.2,0.6,0.2,1) both; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .vb-reveal, .vb-lift, .vb-page-in, .vb-bar, .vb-link-uline::after, .vb-btn-primary {
+    transition: none !important;
+    animation: none !important;
+  }
+  .vb-reveal { opacity: 1; transform: none; }
+}
