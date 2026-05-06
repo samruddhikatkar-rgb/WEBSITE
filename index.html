@@ -933,12 +933,15 @@
       const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
-        const formData = new FormData(e.target);
+        const fd = new FormData(e.target);
+        const encoded = Array.from(fd.entries())
+          .map(([k, v]) => encodeURIComponent(k) + '=' + encodeURIComponent(v))
+          .join('&');
         try {
           const res = await fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString(),
+            body: encoded,
           });
           setStatus(res.ok ? 'sent' : 'error');
         } catch {
