@@ -112,7 +112,7 @@
 </head>
 <body>
   <!-- Netlify Forms detection — must exist as static HTML so Netlify registers the form at deploy time -->
-  <form name="contact" netlify netlify-honeypot="bot-field" style="display:none">
+  <form name="contact" netlify style="display:none">
     <input type="text"  name="name" />
     <input type="text"  name="company" />
     <input type="email" name="email" />
@@ -971,9 +971,8 @@
       const busy = status === 'sending';
 
       return (
-        <form onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" name="contact" style={{ display: 'grid', gap: 18 }}>
+        <form onSubmit={handleSubmit} data-netlify="true" name="contact" style={{ display: 'grid', gap: 18 }}>
           <input type="hidden" name="form-name" value="contact" />
-          <input name="bot-field" style={{ position:'absolute', left:'-9999px', opacity:0, pointerEvents:'none' }} tabIndex="-1" autoComplete="off" />
           {status === 'error' && (
             <div style={{ padding: '12px 16px', background: '#FFF5F5', border: '1px solid #FC8181', borderRadius: 4, color: '#C53030', fontSize: 14 }}>
               Submission failed. Please email us directly at <strong>vibmon@hotmail.com</strong>
