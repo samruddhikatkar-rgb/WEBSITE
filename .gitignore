@@ -1,2 +1,6 @@
 # Claude Code session memory — not for version control
 .claude/
+
+# Environment variables — never commit
+.env
+.env.local

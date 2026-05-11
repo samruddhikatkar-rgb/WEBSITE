@@ -111,7 +111,7 @@
   </style>
 </head>
 <body>
-  <!-- Netlify Forms detection — must exist as static HTML so Netlify registers the form at deploy time -->
+  <!-- Netlify Forms detection — static HTML so Netlify registers the form at deploy time -->
   <form name="contact" netlify style="display:none">
     <input type="text"  name="name" />
     <input type="text"  name="company" />
@@ -934,19 +934,21 @@
         e.preventDefault();
         setStatus('sending');
         const form = e.target;
-        const body = [
-          ['form-name',    'contact'],
-          ['name',         form.name.value],
-          ['company',      form.company.value],
-          ['email',        form.email.value],
-          ['phone',        form.phone.value],
-          ['enquiry_type', form.enquiry_type.value],
-          ['message',      form.message.value],
-        ]
-          .map(([k, v]) => encodeURIComponent(k) + '=' + encodeURIComponent(v ?? ''))
-          .join('&');
         try {
-          const res = await fetch('/', {
+          const isVercel = await fetch('/platform.json').then(r => r.ok).catch(() => false);
+          const fields = [
+            ['name',         form.name.value],
+            ['company',      form.company.value],
+            ['email',        form.email.value],
+            ['phone',        form.phone.value],
+            ['enquiry_type', form.enquiry_type.value],
+            ['message',      form.message.value],
+          ];
+          if (!isVercel) fields.unshift(['form-name', 'contact']);
+          const body = fields
+            .map(([k, v]) => encodeURIComponent(k) + '=' + encodeURIComponent(v ?? ''))
+            .join('&');
+          const res = await fetch(isVercel ? '/api/contact' : '/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body,

@@ -1,4 +1,4 @@
-# Exclude Claude Code session memory from public deployment
+# Exclude Claude Code session memory
 .claude/
 
 # Exclude orphaned JSX source reference files (not loaded by the app)
@@ -12,9 +12,3 @@ Waveform.jsx
 
 # Exclude development docs
 README.md
-
-# Vercel-only files
-vercel.json
-.vercelignore
-platform.json
-api/
